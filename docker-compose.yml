@@ -4,10 +4,6 @@ services:
   postgres:
     image: postgres
     container_name: postgres-fastapi
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: sampledb
     ports:
       - "5432:5432"
 
@@ -22,5 +18,5 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
       - MODE
-      - DB_URL=postgres://postgres:postgres@postgres:5432/sampledb
+      - DATABASE_URL
 
